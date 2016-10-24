@@ -1,0 +1,9 @@
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\bin\Debug\记事本程序.exe.config
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.csprojResolveAssemblyReference.cache
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.Form1.resources
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.Properties.Resources.resources
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.csproj.GenerateResource.Cache
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\bin\Debug\记事本程序.exe
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\bin\Debug\记事本程序.pdb
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.exe
+F:\aboutIT\代码备份\git\c#\csharp\.git\记事本程序\记事本程序\obj\Debug\记事本程序.pdb
