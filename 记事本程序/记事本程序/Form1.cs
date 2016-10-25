@@ -36,7 +36,7 @@ namespace 记事本程序
             test.Clear();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string ls = openFileDialog1.FileName;
+                string ls = openFileDialog1.SafeFileName;
                 this.Text = ls;
                 fileplace = openFileDialog1.FileName;
                 StreamReader objReader = new StreamReader(fileplace,System.Text.Encoding.Default);
@@ -65,19 +65,22 @@ namespace 记事本程序
             else
             {
                 sn = test.Text;
-                saveFileDialog1.Filter = "txt files(*.txt)|*.txt|xls files(*.xls)|*.xls|All files(*.*)|*.*";
+                saveFileDialog1.Filter = "txt files(*.txt)|*.*";
                 saveFileDialog1.ShowDialog();
-                string ls = saveFileDialog1.FileName;
-                StreamWriter objwriter = new StreamWriter(ls,true ,System.Text.Encoding.Default);
-
-                for (int i = 0; i < test.Lines.Length; i++)
+                if (saveFileDialog1.FileName != null)
                 {
-                    objwriter.WriteLine(sn);
+                    string ls = saveFileDialog1.FileName;
+                    StreamWriter objwriter = new StreamWriter(ls, true, System.Text.Encoding.Default);
+
+                    for (int i = 0; i < test.Lines.Length; i++)
+                    {
+                        objwriter.WriteLine(sn);
+                    }
+
+                    filename = ls;
+                    objwriter.Close();
+                    // objwriter.
                 }
-                   
-                filename = ls;
-                objwriter.Close();
-                // objwriter.
             }
             this.Text = filename;
 
@@ -88,17 +91,22 @@ namespace 记事本程序
             sn = test.Text;
             saveFileDialog1.Filter = "txt files(*.txt)|*.txt|xls files(*.xls)|*.xls|All files(*.*)|*.*";
             saveFileDialog1.ShowDialog();
-            string ls = saveFileDialog1.FileName;
-            StreamWriter objwriter = new StreamWriter(ls, true, System.Text.Encoding.Default);
-
-            for (int i = 0; i < test.Lines.Length; i++)
+            if (saveFileDialog1.FileName != null)
             {
-                objwriter.WriteLine(sn);
-            }
+                 string ls = saveFileDialog1.FileName;
+                StreamWriter objwriter = new StreamWriter(ls, true, System.Text.Encoding.Default);
 
-            filename = ls;
-            objwriter.Close();
-            // objwriter.
+                for (int i = 0; i < test.Lines.Length; i++)
+                {
+                    objwriter.WriteLine(sn);
+                }
+
+                filename = ls;
+                objwriter.Close();
+                // objwriter.
+            }
+           
+           
 
 
         }
